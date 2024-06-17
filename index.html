@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/media.css">
+    <title>Kitchen</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a class="logo"><img src="assets/images/logo.svg" alt=""></a>
+                <nav id="desktop-nav">
+                    <ul class="nav__list">
+                        <li><a class="nav__link" href="#menu">Menu</a></li>
+                        <li><a class="nav__link" href="#delivery">Delivery</a></li>
+                        <li><a class="nav__link" href="#faq">FAQ</a></li>
+                        <li><a class="nav__link" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav id="hamburger-nav">
+                    <div class="hamburger-menu">
+                        <div class="hamburger-icon" onclick="toggleMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="menu-links">
+                            <a class="nav__link" href="#menu">Menu</a>
+                            <a class="nav__link" href="#delivery">Delivery</a>
+                            <a class="nav__link" href="#faq">FAQ</a>
+                            <a class="nav__link" href="#contact">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="info">
+                    <img src="assets/images/call.svg" alt="">
+                    <p class="text">591 902 883</p>
+                </div>
+                <div class="info">
+                    <p class="text">EN</p>
+                    <img src="assets/images/vector.svg" alt="">
+                </div>
+                <button class="signIn-btn"><img src="assets/images/signUp.svg" alt="">
+                    <p>Sign in</p>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal signIn-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Welcome</h2>
+            <form action="#" method="post" class="signIn-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="signUp-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>sign up :)</h2>
+            <form action="#" method="post" id="signUp-form">
+                <label for="signUpName">Username:</label>
+                <input type="text" id="signUpName" name="signUpName" required>
+    
+                <label for="signUpEmail">Email:</label>
+                <input type="email" id="signUpEmail" name="signUpEmail" required>
+    
+                <label for="signUpEmail">Password:</label>
+                <input type="password" id="signUpPassword" name="signUpPassword" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <main class="main">
+        <div class="container">
+            <div class="main__content">
+                <div class="main__info">
+                    <div class="main__descr">
+                        <h1 class="main__content-title">Your personal cook</h1>
+                        <p class="main__content-text">The balanced diet for every day</p>
+                    </div>
+                    <button class="main__content-btn"><a href="#menu">Make you choice</a></button>
+                </div>
+                <div class="main__images">
+                    <img class="bottom" src="assets/images/bottomLeft.png" alt="">
+                    <img class="up" src="assets/images/upCenter.png" alt="">
+                    <img class="center" src="assets/images/bottomCenter.png" alt="">
+                    <img class="lines" src="assets/images/lines.png" alt="">
+                    <img class="shadow" src="assets/images/shadow.png" alt="">
+                    <img class="background" src="assets/images/mainImg.png" alt="">
+                    <img class="last" src="assets/images/bottomRight.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="menu">
+        <div class="container">
+            <div class="menu__content">
+                <div class="menu__content-up">
+                    <h1 class="title">OUR MENU</h1>
+                    <div class="buttons">
+                        <button class="button-one">POWER <p>1800</p></button>
+                        <button class="button">SLIM <p>1500</p></button>
+                        <button class="button">BALANCE <p>1300</p></button>
+                        <button class="button">SLIM <p>1500</p></button>
+                        <button class="button">BALANCE <p>1300</p></button>
+                        <button class="button">SLIM <p>1500</p></button>
+                        <button class="button">BALANCE <p>1300</p></button>
+                    </div>
+                </div>
+                <div class="menu__content-down">
+                    <div class="weeks">
+                        <div class="days">
+                            <button class="name">Monday</button>
+                            <button class="name">Tuesday</button>
+                            <button class="name">Wednesday</button>
+                            <button class="name">Thursday</button>
+                            <button class="name">Friday</button>
+                            <button class="name">Saturday</button>
+                            <button class="name">Sunday</button>
+                        </div>
+                        <div class="extra">
+                            <img src="assets/images/arrowLeft.svg" alt="" class="arrow">
+                            <div class="week_info">
+                                <p class="current">WEEK 1</p>
+                                <p class="this">This week</p>
+                            </div>
+                            <img src="assets/images/arrowRight.svg" alt="" class="arrow">
+                        </div>
+                    </div>
+                    <div class="menu-bar">
+                        <img class="left" src="assets/images/left.svg" alt="">
+                        <div class="menu-list">
+                            <div class="menu-item">
+                                <img src="assets/images/salad.png" alt="" class="menu-img">
+                                <p class="menu-title">BREAKFAST 2</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/pasta.png" alt="" class="menu-img">
+                                <p class="menu-title">Lunch</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/nuts.png" alt="" class="menu-img">
+                                <p class="menu-title">Snack</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/veggies.png" alt="" class="menu-img">
+                                <p class="menu-title">Dinner</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/chicken.png" alt="" class="menu-img">
+                                <p class="menu-title">BREAKFAST 1</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/pasta.png" alt="" class="menu-img">
+                                <p class="menu-title">Lunch</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/salad.png" alt="" class="menu-img">
+                                <p class="menu-title">BREAKFAST 2</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/nuts.png" alt="" class="menu-img">
+                                <p class="menu-title">Snack</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/chicken.png" alt="" class="menu-img">
+                                <p class="menu-title">BREAKFAST 1</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="assets/images/salad.png" alt="" class="menu-img">
+                                <p class="menu-title">BREAKFAST 2</p>
+                                <p class="menu-text">Chicken fricassee with mushrooms and bulgur</p>
+                                <div class="menu-descr">
+                                    <p>Protein - 15 g</p>
+                                    <p>Fat - 7 g</p>
+                                    <p>Carbohydrates - 24 g</p>
+                                    <p>Energy - 285 kсal</p>
+                                    <p>Тotal weight: 345 g</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="right" src="assets/images/right.svg" alt="">
+                    </div>
+                    <p class="about">
+                        A balanced menu helps to maintain health and a slim figure, allows you to be cheerful
+                        and active throughout the week. While preparing our dishes, we use products from the best
+                        suppliers
+                        and always choose products that correspond to the concept of healthy nutrition. For example,
+                        lean
+                        beef, turkey and chicken, low-calorie sauces, pasta of hard varieties. Delivery is carried out
+                        every
+                        2 days.
+                    </p>
+                    <div class="notes">
+                        <button class="day"><img src="assets/images/from.svg" alt="">from 56 <br>gel/day<img
+                                src="assets/images/fromleft.svg" alt=""></button>
+                        <p class="total">Total on <br>Tuesday: <br>1435 kcal</p>
+                        <div class="datas">
+                            <div class="data">
+                                <img src="assets/images/protein.svg" alt="">
+                                <div class="texts">
+                                    <p class="number">71</p>
+                                    <p class="data-text">Protein</p>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <img src="assets/images/fat.svg" alt="">
+                                <div class="texts">
+                                    <p class="number">70</p>
+                                    <p class="data-text">Fat</p>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <img src="assets/images/calories.svg" alt="">
+                                <div class="texts">
+                                    <p class="number">129</p>
+                                    <p class="data-text">Carbohydrates</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="order">Order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="delivery">
+        <div class="container">
+            <h1 class="title">DELIVERY AREAS</h1>
+            <div class="delivery__content">
+                <form action="" class="form">
+                    <input type="text" placeholder="Enter your address">
+                    <img src="assets/images/search.svg" alt="">
+                </form>
+                <img class="map" src="assets/images/map.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="container">
+            <div class="advantages__content">
+                <h1 class="title">OUR ADVANTAGES</h1>
+                <div class="ad__items">
+                    <div class="adv__item">
+                        <div class="ad-img">
+                            <img src="assets/images/charge.svg" alt="" class="content">
+                            <img src="assets/images/bg-circle.svg" alt="" class="bg">
+                        </div>
+                        <p class="ad-title">We'll deliver it free of charge</p>
+                        <p class="ad-text">In a convenient 2-hour interval</p>
+                    </div>
+                    <div class="adv__item">
+                        <div class="ad-img">
+                            <img src="assets/images/calculate.svg" alt="" class="content">
+                            <img src="assets/images/bg-circle.svg" alt="" class="bg">
+                        </div>
+                        <p class="ad-title">We’ll calculate calories</p>
+                        <p class="ad-text">It will be easy for you to control your diet</p>
+                    </div>
+                    <div class="adv__item">
+                        <div class="ad-img">
+                            <img src="assets/images/service.svg" alt="" class="content">
+                            <img src="assets/images/bg-circle.svg" alt="" class="bg">
+                        </div>
+                        <p class="ad-title">We'll help you to save up to 20 hours </p>
+                        <p class="ad-text">of free time a week for you</p>
+                    </div>
+                    <div class="adv__item">
+                        <div class="ad-img">
+                            <img src="assets/images/veg.svg" alt="" class="content">
+                            <img src="assets/images/bg-circle.svg" alt="" class="bg">
+                        </div>
+                        <p class="ad-title">Everything is ready, just warm it up</p>
+                        <p class="ad-text">We’ll bring you ready-made dishes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="discount">
+        <div class="discount__content">
+            <div class="discount__info">
+                <div class="discount__descr">
+                    <h1 class="discount__content-title">1 day at the price of 23$</h1>
+                    <p class="discount__content-text">Make orders, take part in promotions, recommend us to friends or
+                        connect
+                        recommend us to friends or connect </p>
+                </div>
+                <button class="discount__content-btn">Sign up</button>
+            </div>
+            <div class="discount__images">
+                <img src="assets/images/bigSalad.png" alt="" class="salad">
+                <img src="assets/images/bigVeggies.png" alt="" class="veggies">
+            </div>
+        </div>
+    </div>
+    <section id="faq">
+        <div class="container">
+            <div class="faq__content">
+                <h1 class="title">FAQ</h1>
+                <div class="faq__items">
+                    <button class="item-one"><img src="assets/images/cashbag.svg" alt="">Cashback</button>
+                    <button class="item"><img src="assets/images/diet.svg" alt="">Weight loss</button>
+                    <button class="item"><img src="assets/images/healthy.svg" alt="">Products</button>
+                    <button class="item"><img src="assets/images/rates.svg" alt="">Rates</button>
+                    <button class="item"><img src="assets/images/charity.svg" alt="">Payment</button>
+                    <button class="item"><img src="assets/images/boxes.svg" alt="">Storage</button>
+                </div>
+                <div class="faq__info">
+                    <div class="faq__info-item">
+                      <div class="questions">
+                        What is cashback?
+                        <p class="answers">Make orders, take part in promotions, recommend us to friends or connect
+                          a family tariff. We will refund up to 50% of the order value.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="faq__info-item">
+                      <div class="questions">
+                        How to get cashback?
+                        <p class="answers">Make orders, take part in promotions, recommend us to friends or connect
+                          a family tariff. We will refund up to 50% of the order value.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="faq__info-item">
+                      <div class="questions">
+                        Why can I only spend part of the cashback?
+                        <p class="answers">Make orders, take part in promotions, recommend us to friends or connect
+                          a family tariff. We will refund up to 50% of the order value.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="faq__info-item">
+                      <div class="questions">
+                        Where can I see how many bonus rubles I have in my account?
+                        <p class="answers">Make orders, take part in promotions, recommend us to friends or connect
+                          a family tariff. We will refund up to 50% of the order value.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="faq__info-item">
+                      <div class="questions">
+                        What can I spend cashback on?
+                        <p class="answers">Make orders, take part in promotions, recommend us to friends or connect
+                          a family tariff. We will refund up to 50% of the order value.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="contact__content">
+                <img src="assets/images/tomatos.png" alt="" class="contact_img">
+                <div class="contact__name">
+                    <h1 class="contact_title">LET'S GET IN TOUCH</h1>
+                    <p class="contact_text">
+                        Make orders, take part in promotions, recommend us to friends or connect
+                    </p>
+                </div>
+                <div class="contact__info">
+                    <div class="contact_form">
+                        <input class="input" type="text" placeholder="Your name" class="name">
+                        <input class="input" type="text" placeholder="Your number" class="number">
+                    </div>
+                    <input class="input" type="text" placeholder="Your E-mail" class="email">
+                    <div class="contact_buttons">
+                        <button class="contact_btn">Make your choice</button>
+                        <button class="tg_btn"><img src="assets/images/tg.svg" alt="">
+                            <p>Telegram</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="assets/images/logo.svg" alt="" class="logo">
+                <div class="footer-contact">
+                    <img src="assets/images/tgg.svg" alt="">
+                    <img src="assets/images/insta.svg" alt="">
+                    <img src="assets/images/facebook.svg" alt="">
+                </div>
+            </div>
+            <ul class="footer__list">
+                <li><a class="footer__link" href="#menu">Menu</a></li>
+                <li><a class="footer__link" href="#delivery">Delivery</a></li>
+                <li><a class="footer__link" href="#faq">FAQ</a></li>
+                <li><a class="footer__link" href="#contact">Contact</a></li>
+            </ul>
+            <div class="footer__terms">
+                <p>Privacy Policy</p>
+                <p>Terms and Conditions</p>
+                <p>Terms and Conditions</p>
+            </div>
+            <div class="footer__info">
+                <div class="footer__items">
+                    <div class="footer__item">
+                        <img src="assets/images/location.svg" alt="">
+                        <p>Tbilisi, Georgia</p>
+                    </div>
+                    <div class="footer__item">
+                        <img src="assets/images/tel.svg" alt="">
+                        <p>591902883 (9:00 - 18:00)</p>
+                    </div>
+                    <div class="footer__item">
+                        <img src="assets/images/email.svg" alt="">
+                        <p>info@chef-kitchen.com</p>
+                    </div>
+                </div>
+                <div class="footer__descr">
+                    <p>Individual entrepreneur Nikita Mosin</p>
+                    <p>Identification Number: 302252210</p>
+                </div>
+            </div>
+            <div class="footer__images">
+                <img src="assets/images/roundLines.png" alt="" class="footer_lines">
+                <img src="assets/images/lastSalad.png" alt="" class="footer_salad">
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
